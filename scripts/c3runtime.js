@@ -6312,6 +6312,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.MoveTo.Acts.MoveToObject,
 		C3.Plugins.InstantGamesBridge.Acts.AppendStorageDataGetRequest,
 		C3.Plugins.InstantGamesBridge.Acts.SendStorageDataGetRequest,
+		C3.Plugins.InstantGamesBridge.Acts.ShowBanner,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Camera3D.Acts.SetPosition,
 		C3.Plugins.Sprite.Acts.SetAngle,
