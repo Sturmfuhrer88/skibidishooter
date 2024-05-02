@@ -6312,7 +6312,6 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.MoveTo.Acts.MoveToObject,
 		C3.Plugins.InstantGamesBridge.Acts.AppendStorageDataGetRequest,
 		C3.Plugins.InstantGamesBridge.Acts.SendStorageDataGetRequest,
-		C3.Plugins.InstantGamesBridge.Acts.ShowBanner,
 		C3.Plugins.System.Cnds.EveryTick,
 		C3.Plugins.Camera3D.Acts.SetPosition,
 		C3.Plugins.Sprite.Acts.SetAngle,
@@ -6363,8 +6362,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.InstantGamesBridge.Cnds.OnInterstitialLoading,
 		C3.Behaviors.MoveTo.Acts.Stop,
 		C3.Behaviors.EightDir.Acts.Stop,
-		C3.Plugins.InstantGamesBridge.Acts.ShowInterstitial,
-		C3.Plugins.InstantGamesBridge.Acts.ShowRewarded
+		C3.Plugins.InstantGamesBridge.Acts.AddToFavorites,
+		C3.Plugins.InstantGamesBridge.Acts.ShowRewarded,
+		C3.Plugins.InstantGamesBridge.Cnds.IsAddToFavoritesSupported,
+		C3.Plugins.InstantGamesBridge.Cnds.OnAddToFavoritesCompleted,
+		C3.Plugins.InstantGamesBridge.Cnds.IsLastAddToFavoritesAddedSuccessfully
 	];
 };
 self.C3_JsPropNameTable = [
@@ -6752,7 +6754,10 @@ self.C3_ExpressionFuncs = [
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0(0, 1, 2, 3);
-		}
+		},
+		() => "Функционал 'добавить в избранное' поддерживается",
+		() => "Игра добавлена в избранное",
+		() => "Игра не добавлена в избранное"
 ];
 
 
